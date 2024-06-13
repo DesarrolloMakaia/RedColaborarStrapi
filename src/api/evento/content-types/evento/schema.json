@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos",
+  "info": {
+    "singularName": "evento",
+    "pluralName": "eventos",
+    "displayName": "Evento",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "FechaFin": {
+      "type": "datetime",
+      "required": true
+    },
+    "FechaInicio": {
+      "type": "datetime",
+      "required": true
+    },
+    "ImagenEvento": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Adjunto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Ponente": {
+      "type": "string",
+      "required": true
+    },
+    "FormularioInscripcion": {
+      "type": "string"
+    },
+    "EventoRedColaborar": {
+      "type": "boolean"
+    },
+    "DestacarEvento": {
+      "type": "boolean"
+    },
+    "Ubicacion": {
+      "type": "string"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "Pais": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pais.pais"
+    },
+    "UsuarioOrganizador": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "TipoEvento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evento-tipo.evento-tipo"
+    },
+    "Plataforma": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evento-plataforma.evento-plataforma"
+    },
+    "UrlMeeting": {
+      "type": "string",
+      "required": true
+    },
+    "Modalidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evento-modalidad.evento-modalidad"
+    },
+    "Publico": {
+      "type": "boolean",
+      "default": false
+    },
+    "Nodo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nodo.nodo"
+    }
+  }
+}

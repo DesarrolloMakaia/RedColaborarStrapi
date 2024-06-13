@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_menu_items",
+  "info": {
+    "displayName": "child",
+    "icon": "dot-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "href": {
+      "type": "string"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_blank"
+      ]
+    },
+    "isExternal": {
+      "type": "boolean"
+    },
+    "className": {
+      "type": "json"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "item",
+        "group",
+        "collapse",
+        "divider"
+      ],
+      "default": "item"
+    },
+    "accessLevel": {
+      "type": "enumeration",
+      "enum": [
+        "public",
+        "private"
+      ],
+      "default": "private"
+    },
+    "section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seccion.seccion"
+    }
+  }
+}

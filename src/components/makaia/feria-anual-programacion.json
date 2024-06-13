@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_makaia_feria_anual_programacions",
+  "info": {
+    "displayName": "FeriaAnualProgramacion",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "FechaInicio": {
+      "type": "datetime"
+    },
+    "FechaFin": {
+      "type": "datetime"
+    },
+    "ZoomMeeting": {
+      "type": "string"
+    },
+    "Ponente": {
+      "type": "string"
+    }
+  }
+}

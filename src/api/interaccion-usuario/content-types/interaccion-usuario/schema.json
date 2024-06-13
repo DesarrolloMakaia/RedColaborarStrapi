@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interaccion_usuarios",
+  "info": {
+    "singularName": "interaccion-usuario",
+    "pluralName": "interaccion-usuarios",
+    "displayName": "InteraccionUsuario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Seccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seccion.seccion"
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "TipoInteraccion": {
+      "type": "enumeration",
+      "enum": [
+        "MeGusta",
+        "Guardar",
+        "Compartir",
+        "Suscrito"
+      ],
+      "required": true
+    },
+    "IdElemento": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

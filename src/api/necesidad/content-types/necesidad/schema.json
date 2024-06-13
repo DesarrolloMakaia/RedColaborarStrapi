@@ -1,0 +1,108 @@
+{
+  "kind": "collectionType",
+  "collectionName": "necesidades",
+  "info": {
+    "singularName": "necesidad",
+    "pluralName": "necesidades",
+    "displayName": "Necesidad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "FechaInicio": {
+      "type": "datetime",
+      "required": true
+    },
+    "FechaFin": {
+      "type": "datetime",
+      "required": true
+    },
+    "ImagenNecesidad": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Adjunto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "NombreOrganizacion": {
+      "type": "string",
+      "required": true
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Idioma": {
+      "type": "enumeration",
+      "enum": [
+        "Español",
+        "English",
+        "Portugues"
+      ]
+    },
+    "EjeTematico": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::eje-tematico.eje-tematico"
+    },
+    "Pais": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pais.pais"
+    },
+    "Experiencia": {
+      "type": "text"
+    },
+    "Estado": {
+      "type": "enumeration",
+      "enum": [
+        "Abierto",
+        "En proceso",
+        "Terminado"
+      ]
+    },
+    "FechaEjecucion1": {
+      "type": "datetime"
+    },
+    "FechaEjecucion2": {
+      "type": "datetime"
+    },
+    "FechaEjecucion3": {
+      "type": "datetime"
+    },
+    "NecesidadAceptada": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::necesidad-aceptada.necesidad-aceptada"
+    },
+    "MesesDisponible": {
+      "type": "integer"
+    }
+  }
+}

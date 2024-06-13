@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "red_colaborar_roles",
+  "info": {
+    "singularName": "red-colaborar-rol",
+    "pluralName": "red-colaborar-roles",
+    "displayName": "RedColaborarRol",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Acciones": {
+      "type": "component",
+      "repeatable": true,
+      "component": "makaia.seguridad"
+    }
+  }
+}

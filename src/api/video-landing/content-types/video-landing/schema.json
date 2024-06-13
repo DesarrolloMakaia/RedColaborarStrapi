@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos_landing",
+  "info": {
+    "singularName": "video-landing",
+    "pluralName": "videos-landing",
+    "displayName": "VideoLanding",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "LinkVideo": {
+      "type": "string",
+      "required": true
+    },
+    "Seccion": {
+      "type": "enumeration",
+      "enum": [
+        "Video1",
+        "Video2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_makaia_ha_cal",
+  "info": {
+    "displayName": "HabilidadCalificacion",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "habilidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::habilidad.habilidad"
+    },
+    "calificacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::calificacion.calificacion"
+    },
+    "Titulo": {
+      "type": "string"
+    }
+  }
+}

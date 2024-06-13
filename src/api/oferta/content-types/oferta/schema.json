@@ -1,0 +1,113 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ofertas",
+  "info": {
+    "singularName": "oferta",
+    "pluralName": "ofertas",
+    "displayName": "Oferta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "FechaInicio": {
+      "type": "datetime",
+      "required": true
+    },
+    "FechaFin": {
+      "type": "datetime",
+      "required": true
+    },
+    "Adjunto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "NombreOrganizacion": {
+      "type": "string",
+      "required": true
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "ImagenOferta": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Idioma": {
+      "type": "enumeration",
+      "enum": [
+        "Español",
+        "English",
+        "Portugues"
+      ]
+    },
+    "EjeTematico": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::eje-tematico.eje-tematico"
+    },
+    "Pais": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pais.pais"
+    },
+    "Experiencia": {
+      "type": "text"
+    },
+    "Estado": {
+      "type": "enumeration",
+      "enum": [
+        "Abierto",
+        "En proceso",
+        "Terminado"
+      ]
+    },
+    "FechaEjecucion1": {
+      "type": "datetime"
+    },
+    "FechaEjecucion2": {
+      "type": "datetime"
+    },
+    "FechaEjecucion3": {
+      "type": "datetime"
+    },
+    "OfertaAceptada": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::oferta-aceptada.oferta-aceptada"
+    },
+    "MesesDisponible": {
+      "type": "integer"
+    },
+    "Habilidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::habilidad.habilidad"
+    }
+  }
+}

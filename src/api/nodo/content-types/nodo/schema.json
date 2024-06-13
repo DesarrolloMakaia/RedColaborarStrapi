@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nodos",
+  "info": {
+    "singularName": "nodo",
+    "pluralName": "nodos",
+    "displayName": "Nodo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "LinkWppGroup": {
+      "type": "string"
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "HabilitarLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "OrganizacionesNodo": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::organizacion.organizacion"
+    },
+    "Abierto": {
+      "type": "boolean",
+      "default": true
+    },
+    "UsuarioEncargado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "PorqueCerrado": {
+      "type": "text"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "LinkVideo": {
+      "type": "string"
+    },
+    "Porque": {
+      "type": "richtext",
+      "required": true
+    },
+    "Objeto": {
+      "type": "richtext",
+      "required": true
+    },
+    "Actividades": {
+      "type": "richtext",
+      "required": true
+    },
+    "ImagenNodo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "LinkMapa": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evento_plataformas",
+  "info": {
+    "singularName": "evento-plataforma",
+    "pluralName": "evento-plataformas",
+    "displayName": "EventoPlataforma",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {}
+    }
+  }
+}

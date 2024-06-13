@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evento_zoom_asistencias",
+  "info": {
+    "singularName": "evento-zoom-asistencia",
+    "pluralName": "evento-zoom-asistencias",
+    "displayName": "EventoZoomAsistencia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Evento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evento.evento"
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

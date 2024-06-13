@@ -1,0 +1,72 @@
+{
+  "collectionName": "components_menu_menu_items",
+  "info": {
+    "displayName": "menuItem",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "secondTitle": {
+      "type": "string"
+    },
+    "secondUrl": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "item",
+        "group",
+        "collapse",
+        "divider"
+      ]
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_blank"
+      ]
+    },
+    "isExternal": {
+      "type": "boolean"
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.item"
+    },
+    "className": {
+      "type": "json"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "accessLevel": {
+      "type": "enumeration",
+      "enum": [
+        "public",
+        "private"
+      ],
+      "default": "private"
+    },
+    "section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seccion.seccion"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "noticia_tipos",
+  "info": {
+    "singularName": "noticia-tipo",
+    "pluralName": "noticia-tipos",
+    "displayName": "NoticiaTipo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Titulo": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    }
+  }
+}

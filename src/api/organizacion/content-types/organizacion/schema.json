@@ -1,0 +1,128 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizacions",
+  "info": {
+    "singularName": "organizacion",
+    "pluralName": "organizacions",
+    "displayName": "Organizacion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreOrganizacion": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "AnoConstitucion": {
+      "type": "integer"
+    },
+    "Mision": {
+      "type": "text"
+    },
+    "CorreoElectronico": {
+      "type": "email"
+    },
+    "CelularContacto": {
+      "type": "string"
+    },
+    "LinkWhatsapp": {
+      "type": "string"
+    },
+    "LinkFacebook": {
+      "type": "string"
+    },
+    "Pais": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pais.pais"
+    },
+    "Ciudad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ciudad.ciudad"
+    },
+    "Activo": {
+      "type": "boolean",
+      "default": true
+    },
+    "habilidades": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::habilidad.habilidad"
+    },
+    "AreaImpacto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::area-impacto.area-impacto"
+    },
+    "TipoOrganizacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tipo-organizacion.tipo-organizacion"
+    },
+    "TipoPublico": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tipo-publico.tipo-publico"
+    },
+    "UsuarioEncargado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "isCompleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "ODS": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sdg.sdg"
+    },
+    "enablePhone": {
+      "type": "boolean",
+      "default": false
+    },
+    "HabilidadesORG": {
+      "type": "component",
+      "repeatable": true,
+      "component": "makaia.habilidad-calificacion"
+    },
+    "LinkPaginaWeb": {
+      "type": "string"
+    },
+    "SocioDonatarioIAF": {
+      "type": "boolean",
+      "default": false
+    },
+    "usuarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "organizacion"
+    },
+    "LinkRedSocial": {
+      "type": "string"
+    },
+    "CoEncargados": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

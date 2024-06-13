@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_makaia_agreements",
+  "info": {
+    "singularName": "terms-makaia-agreement",
+    "pluralName": "terms-makaia-agreements",
+    "displayName": "TermsMakaiaAgreement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

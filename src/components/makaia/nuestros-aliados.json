@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_makaia_nuestros_aliados",
+  "info": {
+    "displayName": "NuestrosAliados",
+    "icon": "people-carry"
+  },
+  "options": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "string"
+    },
+    "Imagen": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

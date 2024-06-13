@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oferta_aceptadas",
+  "info": {
+    "singularName": "oferta-aceptada",
+    "pluralName": "oferta-aceptadas",
+    "displayName": "OfertaAceptada",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Oferta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::oferta.oferta"
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Mensaje": {
+      "type": "text",
+      "required": true
+    },
+    "FechaEjecucion": {
+      "type": "datetime"
+    },
+    "FechaSugerida": {
+      "type": "datetime"
+    }
+  }
+}

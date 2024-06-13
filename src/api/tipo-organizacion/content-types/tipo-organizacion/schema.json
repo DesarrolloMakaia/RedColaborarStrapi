@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipos_organizacion",
+  "info": {
+    "singularName": "tipo-organizacion",
+    "pluralName": "tipos-organizacion",
+    "displayName": "TipoOrganizacion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "necesidad_aceptadas",
+  "info": {
+    "singularName": "necesidad-aceptada",
+    "pluralName": "necesidad-aceptadas",
+    "displayName": "NecesidadAceptada",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Necesidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::necesidad.necesidad"
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Mensaje": {
+      "type": "text",
+      "required": true
+    },
+    "FechaEjecucion": {
+      "type": "datetime"
+    },
+    "FechaSugerida": {
+      "type": "datetime"
+    }
+  }
+}

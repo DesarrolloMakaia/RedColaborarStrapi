@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recursos_formativos",
+  "info": {
+    "singularName": "recurso-formativo",
+    "pluralName": "recursos-formativos",
+    "displayName": "RecursoFormativo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Subtitulo": {
+      "type": "string",
+      "required": true
+    },
+    "Categoria": {
+      "type": "enumeration",
+      "enum": [
+        "IAF",
+        "Recursos prácticos",
+        "Curso"
+      ],
+      "required": true
+    },
+    "Organizacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::organizacion.organizacion"
+    },
+    "ImagenRecurso": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Enlace": {
+      "type": "string"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "Autor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "AdjuntoRecurso": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "audios"
+      ]
+    },
+    "TipoContenido": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recurso-formativo-tipo-contenido.recurso-formativo-tipo-contenido"
+    },
+    "Curso": {
+      "type": "component",
+      "repeatable": true,
+      "component": "makaia.recurso-formativo-curso"
+    },
+    "Publico": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "Idioma": {
+      "type": "enumeration",
+      "enum": [
+        "Español",
+        "English",
+        "Portugues"
+      ]
+    },
+    "Descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "Nodo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nodo.nodo"
+    },
+    "Destacado": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

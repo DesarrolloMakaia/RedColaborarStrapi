@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evento_asistencias",
+  "info": {
+    "singularName": "evento-asistencia",
+    "pluralName": "evento-asistencias",
+    "displayName": "EventoAsistencia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Evento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evento.evento"
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "FeriaAnualProgramacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feria-anual-programacion.feria-anual-programacion"
+    },
+    "FeriaAnual": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feria-anual.feria-anual"
+    }
+  }
+}

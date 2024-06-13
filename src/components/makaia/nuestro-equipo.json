@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_makaia_nuestro_equipos",
+  "info": {
+    "displayName": "NuestroEquipo",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Cargo": {
+      "type": "string"
+    },
+    "Foto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

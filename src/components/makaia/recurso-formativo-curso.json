@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_makaia_recurso_formativo_cursos",
+  "info": {
+    "displayName": "RecursoFormativoCurso",
+    "icon": "clipboard-list",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Encabezado": {
+      "type": "string",
+      "required": true
+    },
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "Subtitulo": {
+      "type": "string"
+    },
+    "SubtituloDescripcion": {
+      "type": "text"
+    },
+    "Material": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Embed": {
+      "type": "string"
+    },
+    "Enlace": {
+      "type": "string"
+    }
+  }
+}

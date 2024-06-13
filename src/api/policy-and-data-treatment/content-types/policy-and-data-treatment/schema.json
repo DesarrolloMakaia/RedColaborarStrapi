@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "policy_and_data_treatments",
+  "info": {
+    "singularName": "policy-and-data-treatment",
+    "pluralName": "policy-and-data-treatments",
+    "displayName": "PolicyAndDataTreatment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

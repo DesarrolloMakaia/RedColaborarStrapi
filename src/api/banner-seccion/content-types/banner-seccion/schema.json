@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banner_seccions",
+  "info": {
+    "singularName": "banner-seccion",
+    "pluralName": "banner-seccions",
+    "displayName": "BannerSeccion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Subtitulo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Seccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seccion.seccion"
+    }
+  }
+}

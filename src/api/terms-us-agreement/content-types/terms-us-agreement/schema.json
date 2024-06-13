@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_us_agreements",
+  "info": {
+    "singularName": "terms-us-agreement",
+    "pluralName": "terms-us-agreements",
+    "displayName": "TermsUSAgreement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "text": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    }
+  }
+}

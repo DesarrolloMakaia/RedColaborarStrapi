@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feria_anual_zoom_asistencias",
+  "info": {
+    "singularName": "feria-anual-zoom-asistencia",
+    "pluralName": "feria-anual-zoom-asistencias",
+    "displayName": "FeriaAnualZoomAsistencia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FeriaAnual": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feria-anual.feria-anual"
+    },
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

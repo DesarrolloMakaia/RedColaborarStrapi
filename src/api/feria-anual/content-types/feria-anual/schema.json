@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feria_anuals",
+  "info": {
+    "singularName": "feria-anual",
+    "pluralName": "feria-anuals",
+    "displayName": "FeriaAnual",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Ponente": {
+      "type": "string",
+      "required": true
+    },
+    "Organizaciones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::organizacion.organizacion"
+    },
+    "FechaInicio": {
+      "type": "datetime",
+      "required": true
+    },
+    "FechaFin": {
+      "type": "datetime",
+      "required": true
+    },
+    "ImagenEventoPrincipal": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ZoomMeeting": {
+      "type": "string"
+    },
+    "FechaInicoZoomMeeting": {
+      "type": "datetime"
+    },
+    "FechaFinZoomMeeting": {
+      "type": "datetime"
+    }
+  }
+}

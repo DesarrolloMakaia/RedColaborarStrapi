@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizacion_comentarios",
+  "info": {
+    "singularName": "organizacion-comentario",
+    "pluralName": "organizacion-comentarios",
+    "displayName": "OrganizacionComentario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Organizacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::organizacion.organizacion"
+    },
+    "Comentario": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

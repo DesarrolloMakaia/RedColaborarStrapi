@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_makaia_seguridads",
+  "info": {
+    "displayName": "Seguridad",
+    "icon": "unlock-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Seccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seccion.seccion"
+    },
+    "Ver": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Crear": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Modificar": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Eliminar": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}

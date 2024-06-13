@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "menu_footer_enlace_publics",
+  "info": {
+    "singularName": "menu-footer-enlace-public",
+    "pluralName": "menu-footer-enlace-publics",
+    "displayName": "MenuFooterEnlacePrivate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "menu.menu-item"
+    }
+  }
+}

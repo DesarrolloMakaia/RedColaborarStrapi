@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publicaciones_redcolaborar_tipos",
+  "info": {
+    "singularName": "publicaciones-redcolaborar-tipo",
+    "pluralName": "publicaciones-redcolaborar-tipos",
+    "displayName": "PublicacionesRedcolaborarTipos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "makaia-red-colaborar-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.2.2",
+    "@strapi/plugin-i18n": "4.1.9",
+    "@strapi/plugin-users-permissions": "4.1.9",
+    "@strapi/provider-email-amazon-ses": "^4.1.9",
+    "@strapi/provider-upload-aws-s3": "^4.2.2",
+    "@strapi/strapi": "4.1.9",
+    "mysql": "mysqljs/mysql",
+    "node-machine-id": "^1.1.12",
+    "strapi-plugin-populate-deep": "^0.1.2",
+    "strapi-plugin-transformer": "^2.0.1"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "40cc857b-f70e-429e-95bc-4b13d72c6d27"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

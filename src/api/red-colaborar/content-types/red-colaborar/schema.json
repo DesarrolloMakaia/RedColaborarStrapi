@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "red_colaborars",
+  "info": {
+    "singularName": "red-colaborar",
+    "pluralName": "red-colaborars",
+    "displayName": "RedColaborar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Cuerpo": {
+      "type": "richtext"
+    },
+    "Imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

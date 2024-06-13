@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "google_analytics",
+  "info": {
+    "singularName": "google-analytic",
+    "pluralName": "google-analytics",
+    "displayName": "GoogleAnalytics"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MedicionID": {
+      "type": "string"
+    }
+  }
+}
