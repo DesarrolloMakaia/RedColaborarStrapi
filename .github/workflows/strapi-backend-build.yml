@@ -37,7 +37,7 @@ jobs:
 
     - name: Build frontend image
       run: |
-        docker build -t $ECR_REPOSITORY_URI:$TAG -f Dockerfile.prod .
+        docker build -t $ECR_REPOSITORY_URI:$TAG -f Dockerfile .
         docker tag $ECR_REPOSITORY_URI:$TAG $ECR_REPOSITORY_URI:latest
     - name: Push to ECR
       run: |
