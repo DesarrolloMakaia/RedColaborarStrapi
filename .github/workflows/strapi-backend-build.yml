@@ -43,3 +43,31 @@ jobs:
       run: |
         docker push $ECR_REPOSITORY_URI:$TAG
         docker push $ECR_REPOSITORY_URI:latest
+
+  deploy:
+      name: Deploy Strapi to EC2
+      runs-on: ubuntu-latest
+
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: SSH to EC2 and deploy Strapi
+        env:
+          AWS_REGION: us-gov-west-1
+          ECR_REPOSITORY_URI: 199661752611.dkr.ecr.us-gov-west-1.amazonaws.com
+          ECR_IMAGE_NAME: redcbackend
+          TAG: ghprod.${{ github.run_id }}
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+        run: |
+          echo "${{ secrets.PRIVATE_KEY }}" > private_key.pem
+          chmod 400 private_key.pem
+          ssh -o StrictHostKeyChecking=no -i private_key.pem $EC2_USER@$EC2_HOST << 'EOF'         
+            aws ecr get-login-password --region "${{env.AWS_REGION}}" | docker login --username AWS --password-stdin "${{env.ECR_REPOSITORY_URI}}"
+            docker pull "${{env.ECR_REPOSITORY_URI}}/${{env.ECR_IMAGE_NAME}}:${{env.TAG}}"
+            docker rm strapi_backend -f            
+            docker run -d --name strapi_backend --log-driver=awslogs --log-opt awslogs-region="${{env.AWS_REGION}}" --log-opt awslogs-group="lg-redc-backend-strapi" --log-opt awslogs-stream=strapi-prod-stream --log-opt awslogs-create-group=true -p 1337:1337 --env-file ~/.env --restart unless-stopped "${{env.ECR_REPOSITORY_URI}}/${{env.ECR_IMAGE_NAME}}:${{env.TAG}}"
+            docker image prune -f
+          EOF
+          rm private_key.pem
